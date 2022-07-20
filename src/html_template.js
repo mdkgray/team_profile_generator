@@ -54,7 +54,27 @@ const generateTeamProfile = (team) => {
         `;
     };
 
-    const html = [];
+    const teamArray = [];
+
+    teamArray.push(
+        team
+         .filter((employee) => employee.getRole() === 'Manager')
+         .map((manager) => generateManager(manager))
+    );
+    teamArray.push(
+        team
+         .filter((employee) => employee.getRole() === 'Engineer')
+         .map((engineer) => generateEngineer(engineer))
+         .join('')
+    );
+    teamArray.push(
+        team
+         .filter((employee) => employee.getRole() === 'Intern')
+         .map((intern) => generateIntern(intern))
+         .join('')
+    );
+
+    return teamArray.join('');
 };
 
 // export function to generate generated HTML page 
