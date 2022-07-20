@@ -1,5 +1,5 @@
 const generateTeamProfile = (team) => {
-
+    // function to generate card for manager
     const generateManager = (manager) => {
         return `
         <div class="card employee-card">
@@ -18,6 +18,7 @@ const generateTeamProfile = (team) => {
         `;
     };
 
+    // function to generate card for engineer
     const generateEngineer = (engineer) => {
         return `
         <div class="card employee-card">
@@ -36,6 +37,7 @@ const generateTeamProfile = (team) => {
         `;
     };
 
+    // function to generate card for intern
     const generateIntern = (intern) => {
         return `
         <div class="card employee-card">
@@ -54,8 +56,10 @@ const generateTeamProfile = (team) => {
         `;
     };
 
+    // empty array for generated team cards 
     const teamArray = [];
 
+    // push cards into the array
     teamArray.push(
         team
          .filter((employee) => employee.getRole() === 'Manager')
@@ -109,4 +113,4 @@ module.exports = (team) => {
     </body>
     </html>
     `;
-}
+};
