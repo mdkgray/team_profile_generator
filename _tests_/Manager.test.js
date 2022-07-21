@@ -1,4 +1,3 @@
-const { default: test } = require('node:test');
 const Manager = require('../lib/Manager');
 
 test('Can define office number using constructor argument', () => {
