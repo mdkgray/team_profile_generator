@@ -146,11 +146,10 @@ async function questionPrompt() {
 
 const init = () => {
     questionPrompt()
-    .then((teamData) => fs.writeFileSync('./dist/index.html', 'utf8', generateTeamProfile(teamData)))
+    .then((teamData) => fs.writeFileSync('./dist/index.html', teamData))
     .then(() => console.log('Successfully created HTML web page.'))
     .catch((err) => console.log(err));
 };
 
 // function to initialize the application
 init();
-
