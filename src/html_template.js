@@ -95,9 +95,9 @@ module.exports = (teamData) => {
         <link rel="stylesheet" href="../dist/style.css">        
     </head>
     <body>
-        <div class="container-fluid text-bg-danger">
+        <div class="container-fluid text-bg-dark">
             <div id="header-row" class="row align-items-center">
-                <div class="col-12 jumbotron mb-3 team-heading text-bg-danger p-3">
+                <div class="col-12 jumbotron team-heading text-bg-dark p-3">
                     <h1 class="text-center fs-1">My Awesome Work Team</h1>
                 </div>
             </div>
@@ -112,7 +112,7 @@ module.exports = (teamData) => {
 
         <script src="https://kit.fontawesome.com/c502137733.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    </body>
+    </bodyclass=>
     </html>
     `;
 };

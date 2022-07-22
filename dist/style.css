@@ -1,3 +1,8 @@
+h1 {
+    font-family: monospace;
+    font-size: 65px;
+}
+
 #header-row {
     height: 18vh;
 }
