@@ -141,7 +141,7 @@ async function questionPrompt() {
     if (addMemberQuestion.addMember === true) {
         return questionPrompt()
     }
-    return generateTeam();
+    return generateTeamProfile(teamData);
 };
 
 const init = () => {

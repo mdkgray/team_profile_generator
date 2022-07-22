@@ -1,4 +1,4 @@
-const generateTeamProfile = (team) => {
+const generateTeamProfile = (teamData) => {
     // function to generate card for manager
     const generateManager = (manager) => {
         return `
@@ -61,18 +61,18 @@ const generateTeamProfile = (team) => {
 
     // push cards into the array
     teamArray.push(
-        team
+        teamData
          .filter((employee) => employee.getRole() === 'Manager')
          .map((manager) => generateManager(manager))
     );
     teamArray.push(
-        team
+        teamData
          .filter((employee) => employee.getRole() === 'Engineer')
          .map((engineer) => generateEngineer(engineer))
          .join('')
     );
     teamArray.push(
-        team
+        teamData
          .filter((employee) => employee.getRole() === 'Intern')
          .map((intern) => generateIntern(intern))
          .join('')
@@ -82,7 +82,7 @@ const generateTeamProfile = (team) => {
 };
 
 // export function to generate generated HTML page 
-module.exports = (team) => {
+module.exports = (teamData) => {
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -106,7 +106,7 @@ module.exports = (team) => {
         <div class="container">
             <div class="row">
                 <div class="team-area col-12 d-flex justify-content-center">
-                    ${generateTeamProfile(team)}
+                    ${generateTeamProfile(teamData)}
                 </div>
             </div>
         </div>
