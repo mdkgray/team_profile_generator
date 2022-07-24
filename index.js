@@ -25,6 +25,7 @@ function validateUserInput(teamData) {
     }
 };
 
+// inquirer function for questions for user 
 const userQuestions = async () => {
     const answers = await inquirer 
       .prompt([
@@ -124,10 +125,11 @@ const userQuestions = async () => {
         }
 };
 
-// function to handle questions 
+// async function to handle questions which includes promises 
 async function questionPrompt() {
     await userQuestions()
 
+    // prompt user if they want to add another team member
     const addMemberQuestion = await inquirer
     .prompt([
         {
@@ -144,6 +146,7 @@ async function questionPrompt() {
     return generateTeamProfile(teamData);
 };
 
+// function to control flow of application
 const init = () => {
     questionPrompt()
     .then((teamData) => fs.writeFileSync('./dist/index.html', teamData))

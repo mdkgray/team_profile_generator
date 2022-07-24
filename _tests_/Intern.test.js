@@ -1,5 +1,7 @@
 const Intern = require('../lib/Intern');
 
+// tests for intern class
+
 test('Can get school using constructor argument', () => {
     const testVal = 'USYD';
     const intern = new Intern('Tim', 1, 'test@example.com', testVal);

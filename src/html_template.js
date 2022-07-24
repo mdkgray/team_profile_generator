@@ -59,18 +59,20 @@ const generateTeamProfile = (teamData) => {
     // empty array for generated team cards 
     const teamArray = [];
 
-    // push cards into the array
+    // take user role input and generate card based on role to be pushed into array
     teamArray.push(
         teamData
          .filter((employee) => employee.getRole() === 'Manager')
          .map((manager) => generateManager(manager))
     );
+    // take user role input and generate card based on role to be pushed into array
     teamArray.push(
         teamData
          .filter((employee) => employee.getRole() === 'Engineer')
          .map((engineer) => generateEngineer(engineer))
          .join('')
-    );
+    );    
+    // take user role input and generate card based on role to be pushed into array
     teamArray.push(
         teamData
          .filter((employee) => employee.getRole() === 'Intern')

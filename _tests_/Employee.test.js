@@ -1,5 +1,7 @@
 const Employee = require('../lib/Employee');
 
+// tests for employee class
+
 test('Instantiation of Employee instance', () => {
     const employee = new Employee();
     expect(typeof(employee)).toBe('object');

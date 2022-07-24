@@ -1,5 +1,7 @@
 const Manager = require('../lib/Manager');
 
+// tests for manager class
+
 test('Can define office number using constructor argument', () => {
     const testVal = 50;
     const manager = new Manager('Tim', 1, 'test@example.com', testVal);

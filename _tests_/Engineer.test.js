@@ -1,5 +1,7 @@
 const Engineer = require('../lib/Engineer');
 
+// tests for engineer class
+
 test('Can set GitHub account using constructor argument', () => {
     const testVal = 'TestGitHub';
     const engineer = new Engineer('Tim', 1, 'test@example.com', testVal);
